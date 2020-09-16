@@ -7,6 +7,7 @@ from pydispatch import dispatcher
 from scrapy import signals
 from scrapy.selector import Selector
 from datetime import datetime
+from scrapy.spiders import CrawlSpider
 
 MONTHS = {'January': '01',
           'February': '02',
