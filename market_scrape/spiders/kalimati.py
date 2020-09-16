@@ -93,7 +93,8 @@ class KalimatiSpider(scrapy.Spider):
     def spider_closed(self, spider):
         for name, date_dict in self.product_price.items():
             if date_dict:
-                with open(f'kalimati_{name}.csv', 'w') as file:
+                filename = f'kalimati {name}.csv'
+                with open(filename, 'w') as file:
                     writer = csv.writer(file)
                     writer.writerow(["eng_date", "nep_date", "wholesale_min", "wholesale_max", "retail_min",
                                      "retail_max"])
